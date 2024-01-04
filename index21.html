@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+</head>
+<style>
+.container{
+    height: 80vh;
+    width: 30vh;
+    background-color: rgb(43, 226, 67);
+}
+.box{
+    height: 45px;
+    width: 34px;
+    background-color: blueviolet;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    /* animation-name: HamzaKaAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-delay: 1s; */
+
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate-reverse; */
+
+    animation: HamzaKaAnimation 3 ease-in-out 1s 1s,
+    molana 3s ease-in-out 3s 1;
+
+}
+
+@keyframes HamzaKaAnimation {
+    from{
+ background-color: red;
+    }
+    to{
+        /* transform: translateX(1000px); */
+        background-color: aqua;
+    }
+    
+}
+@keyframes molana {
+    0%{
+        transform: rotate(100deg);
+    }
+    20%{
+        transform: rotate(200deg);
+    }
+    30%{
+        transform: rotate(220deg);
+    }
+    40%{
+        transform: rotate(500deg);
+    }
+    
+}
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            BOX
+        </div>
+    </div>
+</body>
+</html>
